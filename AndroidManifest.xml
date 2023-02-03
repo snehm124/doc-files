@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="">
+
+    <!--    com.documentreader.docs.pdf.word.document.reader.viewer  -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name="com.documentreader.docs.pdf.word.document.reader.viewer.viewer.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_icon_512"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ic_icon__round_192"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AllDocumentViewer"
+        android:usesCleartextTraffic="true"
+        >
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admobAppId" />
+
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.viewer.p006ui.exit_activity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.viewer.p006ui.DocumentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.viewer.p006ui.EnterAppActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.viewer.p006ui.ImageViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.viewer.p006ui.LanguageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.viewer.p006ui.ScreenShotActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.viewer.p006ui.FavouriteActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.viewer.p006ui.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.viewer.p006ui.WelcomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.viewer.p006ui.IndexActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.office.officereader.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.viewer.p006ui.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.viewer.p006ui.ViewerScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.office.officereader.AppActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.office.officereader.FileListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.office.officereader.SysActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.viewer.p006ui.GetStartedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.documentreader.docs.pdf.word.document.reader.viewer.viewer.GoogleAds.InternetNotAvailableActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.all.document.viewer.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
